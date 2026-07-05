@@ -1,0 +1,149 @@
+.home {
+  min-height: 100vh;
+  padding: 64px 2rem 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-glow {
+  position: absolute;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(184,255,0,0.05) 0%, transparent 70%);
+  top: 50%; left: 30%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.home-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  min-height: calc(100vh - 64px);
+  padding: 3rem 0 3rem;
+}
+
+.home-name {
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: var(--text);
+  margin-bottom: 1.4rem;
+}
+
+.name-light {
+  font-weight: 300;
+  color: var(--text2);
+  letter-spacing: -1px;
+}
+
+.home-divider {
+  width: 48px; height: 3px;
+  background: var(--lime);
+  border-radius: 2px;
+  margin-bottom: 1.4rem;
+}
+
+.home-about {
+  font-size: 1rem;
+  color: var(--text2);
+  line-height: 1.85;
+  max-width: 480px;
+  margin-bottom: 1.6rem;
+}
+
+.hl { color: var(--lime); font-weight: 600; }
+
+.home-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.pill {
+  background: var(--black3);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  padding: 5px 14px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.home-actions { display: flex; gap: 0.8rem; }
+
+/* Простая анимация кнопок — только opacity при появлении */
+.btn-lime {
+  background: var(--lime);
+  color: #000;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.2px;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.btn-lime:hover { opacity: 0.85; }
+
+.btn-ghost {
+  border: 1px solid var(--border);
+  color: var(--text2);
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-ghost:hover { border-color: var(--text3); color: var(--text); }
+
+/* PHOTO */
+.home-photo-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-glow {
+  position: absolute;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(184,255,0,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.photo-frame {
+  width: 300px; height: 370px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border-lime);
+  position: relative;
+  z-index: 1;
+}
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .home-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+  .home-photo-wrap { order: -1; }
+  .home-divider { margin: 0 auto 1.4rem; }
+  .home-about { margin: 0 auto 1.6rem; }
+  .home-pills { justify-content: center; }
+  .home-actions { justify-content: center; }
+  .photo-frame { width: 220px; height: 270px; }
+}

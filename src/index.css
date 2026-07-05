@@ -1,0 +1,48 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black:  #050507;
+  --black2: #0c0c10;
+  --black3: #131318;
+  --card:   #0f0f14;
+  --lime:   #b8ff00;
+  --lime2:  #d4ff4d;
+  --lime-glow: rgba(184,255,0,0.1);
+  --text:   #f0f0ee;
+  --text2:  #888896;
+  --text3:  #444450;
+  --border: rgba(255,255,255,0.06);
+  --border-lime: rgba(184,255,0,0.2);
+}
+
+[data-theme="light"] {
+  --black:  #f0f0f0;
+  --black2: #e4e4e4;
+  --black3: #d8d8d8;
+  --card:   #ffffff;
+  --lime:   #5a9e00;
+  --lime2:  #6db800;
+  --lime-glow: rgba(90,158,0,0.1);
+  --text:   #111111;
+  --text2:  #4a4a55;
+  --text3:  #9090a0;
+  --border: rgba(0,0,0,0.07);
+  --border-lime: rgba(90,158,0,0.25);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--black);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background 0.3s, color 0.3s;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--lime); border-radius: 2px; }
+::selection { background: var(--lime); color: #000; }
+a { text-decoration: none; color: inherit; }

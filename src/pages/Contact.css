@@ -1,0 +1,75 @@
+.contact-page {
+  min-height: 100vh;
+  padding: 100px 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+}
+
+.ct-glow { display: none; }
+
+.ct-inner {
+  max-width: 580px;
+  width: 100%;
+  position: relative; z-index: 1;
+}
+
+.ct-header { margin-bottom: 2.5rem; }
+
+.ct-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.ct-sub {
+  font-size: 0.95rem;
+  color: var(--text2);
+}
+
+.ct-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ct-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ct-icon {
+  width: 44px; height: 44px;
+  background: var(--black3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+.ct-info { flex: 1; }
+.ct-ctype { font-size: 0.72rem; color: var(--text3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+.ct-cval  { font-size: 0.95rem; font-weight: 700; color: var(--text); }
+
+.ct-arrow { color: var(--text3); font-size: 1rem; }
+
+.ct-note {
+  text-align: center;
+  color: var(--text3);
+  font-size: 0.88rem;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}

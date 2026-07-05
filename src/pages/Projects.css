@@ -1,0 +1,135 @@
+.projects-page {
+  min-height: 100vh;
+  padding: 100px 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.proj-glow {
+  position: absolute;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(184,255,0,0.04) 0%, transparent 70%);
+  top: 20%; right: -100px;
+  pointer-events: none;
+}
+
+.proj-inner { max-width: 1200px; margin: 0 auto; }
+
+.proj-header { margin-bottom: 3rem; }
+
+.proj-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.proj-sub {
+  font-size: 0.95rem;
+  color: var(--text2);
+}
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Карточки появляются одна за другой при загрузке */
+.proj-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+  animation: cardAppear 0.5s ease both;
+}
+
+.proj-card:nth-child(1) { animation-delay: 0.0s; }
+.proj-card:nth-child(2) { animation-delay: 0.12s; }
+.proj-card:nth-child(3) { animation-delay: 0.24s; }
+.proj-card:nth-child(4) { animation-delay: 0.36s; }
+.proj-card:nth-child(5) { animation-delay: 0.48s; }
+.proj-card:nth-child(6) { animation-delay: 0.60s; }
+
+@keyframes cardAppear {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.proj-img-wrap {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.proj-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.proj-body { padding: 1.3rem 1.5rem 1.5rem; }
+
+.proj-num {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--lime);
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+  opacity: 0.6;
+}
+
+.proj-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+
+.proj-desc {
+  font-size: 0.84rem;
+  color: var(--text2);
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+.proj-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.proj-tag {
+  border: 1px solid var(--border);
+  color: var(--text3);
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.proj-open {
+  display: inline-block;
+  color: var(--text2);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: font-weight 0.1s, color 0.15s;
+}
+
+.proj-open:hover {
+  font-weight: 800;
+  color: var(--text);
+}
+
+@media (max-width: 750px) {
+  .proj-grid { grid-template-columns: 1fr; }
+}
