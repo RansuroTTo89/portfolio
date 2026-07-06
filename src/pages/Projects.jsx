@@ -1,13 +1,19 @@
 import { useApp } from '../context/AppContext'
+import clothing from '../assets/clothing.png'
+import perfume from '../assets/perfume.png'
+import mountain from '../assets/mountain.png'
+import fengshui from '../assets/fengshui.png'
+import flashcards from '../assets/flashcards.png'
+import atshop from '../assets/atshop.png'
 import './Projects.css'
 
 const projectData = [
-  { tags: ['HTML','CSS','JS'],       img: '/img/clothing.png',   link: 'https://ransurotto89.github.io/clothing_store/' },
-  { tags: ['HTML','CSS'],            img: '/img/perfume.png',    link: 'https://ransurotto89.github.io/PERFUME-LINE/' },
-  { tags: ['HTML','CSS','JS'],       img: '/img/mountain.png',   link: 'https://ransurotto89.github.io/Mountain/' },
-  { tags: ['HTML','CSS','JS'],       img: '/img/fengshui.png',   link: 'https://ransurotto89.github.io/Feng-Shui/' },
-  { tags: ['React','JS','CSS'],      img: '/img/flashcards.png', link: 'https://ransurotto89.github.io/Fullstack-cards/' },
-  { tags: ['React','API','CSS'],     img: '/img/atshop.png',     link: 'https://ransurotto89.github.io/at-shop/' },
+  { tags: ['HTML','CSS','JS'],    img: clothing,    link: 'https://ransurotto89.github.io/clothing_store/' },
+  { tags: ['HTML','CSS'],         img: perfume,     link: 'https://ransurotto89.github.io/PERFUME-LINE/' },
+  { tags: ['HTML','CSS','JS'],    img: mountain,    link: 'https://ransurotto89.github.io/Mountain/' },
+  { tags: ['HTML','CSS','JS'],    img: fengshui,    link: 'https://ransurotto89.github.io/Feng-Shui/' },
+  { tags: ['React','JS','CSS'],   img: flashcards,  link: 'https://ransurotto89.github.io/Fullstack-cards/' },
+  { tags: ['React','API','CSS'],  img: atshop,      link: 'https://ransurotto89.github.io/at-shop/' },
 ]
 
 export default function Projects() {

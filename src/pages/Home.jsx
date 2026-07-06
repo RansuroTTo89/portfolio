@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useApp } from '../context/AppContext'
+import photo from '../assets/photo.jpg'
 import './Home.css'
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
         <div className="home-photo-wrap">
           <div className="photo-glow" />
           <div className="photo-frame">
-            <img src="/img/photo.jpg" alt="Abdulkhamid Toshpulatov" className="photo-img" />
+            <img src={photo} alt="Abdulkhamid Toshpulatov" className="photo-img" />
           </div>
         </div>
       </div>
